@@ -24,8 +24,7 @@ I-MP/
 │   │   └── vid3.mp4        # Gallery video 3
 │   └── images/             # Image files
 │       └── fallback.svg    # Fallback poster for videos
-├── README.md               # This file
-└── 提示词.txt             # Original prompt file
+└── README.md               # This file
 ```
 
 ## 🎥 Video Requirements
