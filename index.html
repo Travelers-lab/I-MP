@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Reliable Robot Motion Planner</title>
+    <meta name="description" content="Research paper on reliable robot motion planning in complex real-world environments via action imagination">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <!-- Favicon (optional) -->
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>Robot Motion Planner</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#overview" class="nav-link">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#videos" class="nav-link">Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#acknowledgements" class="nav-link">Acknowledgements</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="hero" id="home">
+        <div class="hero-video-container">
+            <video 
+                class="hero-video" 
+                autoplay 
+                muted 
+                loop 
+                playsinline 
+                poster="./assets/images/fallback.svg"
+            >
+                <source src="./assets/videos/header-bg.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">A Reliable Robot Motion Planner in Complex Real-world Environments via Action Imagination</h1>
+                
+                <div class="authors">
+                    <p>
+                        <span class="author">Chengjin Wang</span>,
+                        <span class="author">Yanmin Zhou</span>,
+                        <span class="author">Zhipeng Wang</span>,
+                        <span class="author">Zheng Yan</span>,
+                        <span class="author">Feng Luan</span>,
+                        <span class="author">Shuo Jiang</span>,
+                        <span class="author">Runjie Shen</span>,
+                        <span class="author">Hongrui Sang</span>,
+                        <span class="author">Bin He</span>
+                    </p>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary" target="_blank" rel="noopener">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14,2 14,8 20,8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10,9 9,9 8,9"></polyline>
+                        </svg>
+                        Paper
+                    </a>
+                    <a href="#" class="btn btn-secondary" target="_blank" rel="noopener">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="section overview" id="overview">
+        <div class="container">
+            <h2 class="section-title">Overview</h2>
+            
+            <div class="overview-content">
+                <div class="video-container">
+                    <video 
+                        class="overview-video" 
+                        controls 
+                        preload="metadata"
+                        poster="./assets/images/overview-poster.jpg"
+                    >
+                        <source src="./assets/videos/overview.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div class="abstract">
+                    <h3>Abstract</h3>
+                    <p>
+                        Humans and animals can make real-time adjustments to movements by imagining their action outcomes to prevent unanticipated or even catastrophic motion failures in unknown unstructured environments. Action imagination, as a refined sensorimotor strategy, leverages perception-action loops to handle physical interaction-induced uncertainties in perception and system modeling within complex systems. Inspired by the action-awareness capability of animal intelligence, this study proposes an imagination-inspired motion planner (I-MP) framework that specifically enhances robots’ action reliability by imagining plausible spatial states for approaching. After topologizing the workspace, I-MP build perception-action loop enabling robots autonomously build contact models. Leveraging fixed-point theory and Hausdorff distance, the planner computes convergent spatial states under interaction characteristics and mission constraints. By homogenously representing multi-dimensional environmental characteristics through work, the robot can approach the imagined spatial states via real-time computation of energy gradients. Consequently, experimental results demonstrate the practicality and robustness of I-MP in complex cluttered environments.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery Section -->
+    <section class="section video-gallery" id="videos">
+        <div class="container">
+            <h2 class="section-title">Video Results</h2>
+            
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-container">
+                        <video 
+                            class="gallery-video" 
+                            controls 
+                            preload="metadata"
+                            poster="./assets/images/vid1-poster.jpg"
+                        >
+                            <source src="./assets/videos/vid1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-caption">
+                        <h4>Complex Environment Navigation</h4>
+                        <p>Demonstration of robot navigation in cluttered environments with dynamic obstacles.</p>
+                    </div>
+                </div>
+                
+                <div class="video-item">
+                    <div class="video-container">
+                        <video 
+                            class="gallery-video" 
+                            controls 
+                            preload="metadata"
+                            poster="./assets/images/vid2-poster.jpg"
+                        >
+                            <source src="./assets/videos/vid2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-caption">
+                        <h4>Action Imagination Process</h4>
+                        <p>Visualization of the action imagination algorithm in real-time planning scenarios.</p>
+                    </div>
+                </div>
+                
+                <div class="video-item">
+                    <div class="video-container">
+                        <video 
+                            class="gallery-video" 
+                            controls 
+                            preload="metadata"
+                            poster="./assets/images/vid3-poster.jpg"
+                        >
+                            <source src="./assets/videos/vid3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-caption">
+                        <h4>Real-world Implementation</h4>
+                        <p>Successful deployment and testing of the motion planner in real-world scenarios.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acknowledgements Section -->
+    <section class="section acknowledgements" id="acknowledgements">
+        <div class="container">
+            <h2 class="section-title">Acknowledgements</h2>
+            <div class="acknowledgements-content">
+                <p>
+                    This work received support from the National Natural Science Foundation of China (No. 62088101), 
+                    the Science and Technology Commission of Shanghai Municipality (No.2021SHZDZX0100, 22ZR1467100), 
+                    and the Fundamental Research Funds for the Central Universities (No.22120240291).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>If you have any questions, please feel free to contact: 
+                                <a href="mailto:yanmin.zhou@tongji.edu.cn">yanmin.zhou@tongji.edu.cn</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 A Reliable Robot Motion Planner. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
