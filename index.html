@@ -113,9 +113,12 @@
                 <div class="video-container">
                     <video 
                         class="overview-video" 
-                        controls 
-                        preload="metadata"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
                         poster="./assets/images/overview-poster.jpg"
+                        style="display:block;width:100%;height:auto;"
                     >
                         <source src="./assets/videos/overview.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -137,80 +140,98 @@
         <div class="container">
             <h2 class="section-title">Video Results</h2>
             
-            <div class="video-grid">
-                <div class="video-item">
-                    <div class="video-container">
-                        <video 
-                            class="gallery-video" 
-                            controls 
-                            preload="metadata"
-                            poster="./assets/images/vid1-poster.jpg"
-                        >
-                            <source src="./assets/videos/vid1.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+            <div class="video-gallery-grid">
+                <!-- First row: two columns -->
+                <div class="video-row video-row-2">
+                    <div class="video-item">
+                        <div class="video-container">
+                            <video 
+                                class="gallery-video" 
+                                controls 
+                                preload="metadata"
+                                poster="./assets/images/vid1-poster.jpg"
+                            >
+                                <source src="./assets/videos/vid1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="video-caption">
+                            <h4>Cluttered Environment Movements</h4>
+                            <p>Stress testing of I-MP in pybullet simulation environments.</p>
+                        </div>
                     </div>
-                    <div class="video-caption">
-                        <h4>Cluttered Environment Movements</h4>
-                        <p>Stress testing of I-MP in pybullet simulation environments.</p>
-                    </div>
-                </div>
-                
-                <div class="video-item">
-                    <div class="video-container">
-                        <video 
-                            class="gallery-video" 
-                            controls 
-                            preload="metadata"
-                            poster="./assets/images/vid2-poster.jpg"
-                        >
-                            <source src="./assets/videos/vid2.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="video-caption">
-                        <h4>>Cluttered Environment Movements</h4>
-                        <p>Stress testing of I-MP in real-time planning scenarios.</p>
-                    </div>
-                </div>
-                
-                <div class="video-item">
-                    <div class="video-container">
-                        <video 
-                            class="gallery-video" 
-                            controls 
-                            preload="metadata"
-                            poster="./assets/images/vid3-poster.jpg"
-                        >
-                            <source src="./assets/videos/vid3.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="video-caption">
-                        <h4>Real-world Implementation</h4>
-                        <p>Successful testing of the I-MP in a space extension mission.</p>
+                    <div class="video-item">
+                        <div class="video-container">
+                            <video 
+                                class="gallery-video" 
+                                controls 
+                                preload="metadata"
+                                poster="./assets/images/vid2-poster.jpg"
+                            >
+                                <source src="./assets/videos/vid2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="video-caption">
+                            <h4>Cluttered Environment Movements</h4>
+                            <p>Stress testing of I-MP in real-time planning scenarios.</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="video-item">
-                    <div class="video-container">
-                        <video 
-                            class="gallery-video" 
-                            controls 
-                            preload="metadata"
-                            poster="./assets/images/vid4-poster.jpg"
-                        >
-                            <source src="./assets/videos/vid4.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                <!-- Second row: three columns -->
+                <div class="video-row video-row-3">
+                    <div class="video-item">
+                        <div class="video-container">
+                            <video 
+                                class="gallery-video" 
+                                controls 
+                                preload="metadata"
+                                poster="./assets/images/vid3-poster.jpg"
+                            >
+                                <source src="./assets/videos/vid3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="video-caption">
+                            <h4>Real-world Implementation</h4>
+                            <p>Successful testing of the I-MP in a space extension mission.</p>
+                        </div>
                     </div>
-                    <div class="video-caption">
-                        <h4>Real-world Implementation</h4>
-                        <p>Successful deployment and testing of the I-MP in a cabinet scenario</p>
+                    <div class="video-item">
+                        <div class="video-container">
+                            <video 
+                                class="gallery-video" 
+                                controls 
+                                preload="metadata"
+                                poster="./assets/images/vid4-poster.jpg"
+                            >
+                                <source src="./assets/videos/vid4.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="video-caption">
+                            <h4>Real-world Implementation</h4>
+                            <p>Successful deployment and testing of the I-MP in a cabinet scenario</p>
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-container">
+                            <video 
+                                class="gallery-video" 
+                                controls 
+                                preload="metadata"
+                                poster="./assets/images/vid5-poster.jpg"
+                            >
+                                <source src="./assets/videos/vid5.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="video-caption">
+                            <h4>Additional Experiment</h4>
+                            <p>Further demonstration of I-MP capabilities.</p>
+                        </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </section>
