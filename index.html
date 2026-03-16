@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Reliable Robot Motion Planner</title>
-    <meta name="description" content="Research paper on reliable robot motion planning in complex real-world environments via action imagination">
+    <title>A Tactile-based Interactive Motion Planner for Robots in Cluttered Unknown Environments</title>
+    <meta name="description" content="A Tactile-based Interactive Motion Planner for Robots in Cluttered Unknown Environments">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
@@ -66,18 +66,17 @@
         
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">A Reliable Robot Motion Planner in Complex Real-world Environments via Action Imagination</h1>
+                <h1 class="hero-title">A Tactile-based Interactive Motion Planner for Robots in Cluttered Unknown Environments</h1>
                 
                 <div class="authors">
                     <p>
                         <span class="author">Chengjin Wang</span>,
                         <span class="author">Yanmin Zhou</span>,
-                        <span class="author">Zhipeng Wang</span>,
                         <span class="author">Zheng Yan</span>,
                         <span class="author">Feng Luan</span>,
-                        <span class="author">Shuo Jiang</span>,
                         <span class="author">Runjie Shen</span>,
                         <span class="author">Hongrui Sang</span>,
+                        <span class="author">Zhipeng Wang</span>,
                         <span class="author">Bin He</span>
                     </p>
                 </div>
@@ -110,25 +109,11 @@
             <h2 class="section-title">Overview</h2>
             
             <div class="overview-content">
-                <div class="video-container">
-                    <video 
-                        class="overview-video" 
-                        autoplay
-                        muted
-                        loop
-                        playsinline
-                        poster="./assets/images/overview-poster.jpg"
-                        style="display:block;width:100%;height:auto;"
-                    >
-                        <source src="./assets/videos/overview.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
                 
                 <div class="abstract">
                     <h3>Abstract</h3>
                     <p>
-                        Humans and animals can make real-time adjustments to movements by imagining their action outcomes to prevent unanticipated or even catastrophic motion failures in unknown unstructured environments. Action imagination, as a refined sensorimotor strategy, leverages perception-action loops to handle physical interaction-induced uncertainties in perception and system modeling within complex systems. Inspired by the action-awareness capability of animal intelligence, this study proposes an imagination-inspired motion planner (I-MP) framework that specifically enhances robots’ action reliability by imagining plausible spatial states for approaching. After topologizing the workspace, I-MP build perception-action loop enabling robots autonomously build contact models. Leveraging fixed-point theory and Hausdorff distance, the planner computes convergent spatial states under interaction characteristics and mission constraints. By homogenously representing multi-dimensional environmental characteristics through work, the robot can approach the imagined spatial states via real-time computation of energy gradients. Consequently, experimental results demonstrate the practicality and robustness of I-MP in complex cluttered environments.
+                        In unknown cluttered environments with densely stacked objects, the free-motion space is extremely barren, posing significant challenges to motion planners. Collision-free planning methods often suffer from catastrophic failures due to unexpected collisions and motion obstructions. To address this issue, this paper proposes an interactive motion planning framework (I-MP), based on a perception-motion loop. This framework empowers robots to autonomously model and reason about contact models, which in turn enables safe expansion of the free-motion space. Specifically, the robot utilizes multimodal tactile perception to acquire stimulus-response signal pairs. This enables real-time identification of objects' mechanical properties and the subsequent construction of contact models. These models are integrated as computational constraints into a reactive planner. Based on fixed-point theorems, the planner computes the spatial state toward the target in real time, thus avoiding the computational burden associated with extrapolating on high-dimensional interaction models. Furthermore, high-dimensional interaction features are linearly superposed in Cartesian space in the form of energy, and the controller achieves trajectory tracking by solving the energy gradient from the current state to the planned state. The experimental results showed that at cruising speeds ranging from 0.01 to 0.07 $m/s$, the robot's initial contact force with objects remained stable at 1.0$\pm$0.7 $N$. In the cabinet scenario test where collision-free trajectories were unavailable, I-MP expanded the free motion space by 37.5\% through active interaction, successfully completing the environmental exploration task.
                     </p>
                 </div>
             </div>
@@ -173,8 +158,8 @@
                             </video>
                         </div>
                         <div class="video-caption">
-                            <h4>Reliability of Action Imagination</h4>
-                            <p>The reliability of action imagination comprehensively measures the robot's ability to represent, perceive, and extrapolate with the multidimensional features of objects.</p>
+                            <h4>Motion-Control Continuity Tests</h4>
+                            <p>Hardware tests where the robot interacts with varying object types.</p>
                         </div>
                     </div>
                 </div>
@@ -195,23 +180,6 @@
                         <div class="video-caption">
                             <h4>Motion Adaptation in Clutters</h4>
                             <p>In this test the robot is required to identify and extend the potential free-motion through physical interactions to reach target states.</p>
-                        </div>
-                    </div>
-                    <div class="video-item">
-                        <div class="video-container">
-                            <video 
-                                class="gallery-video" 
-                                controls 
-                                preload="metadata"
-                                poster="./assets/images/vid4-poster.jpg"
-                            >
-                                <source src="./assets/videos/vid4.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <div class="video-caption">
-                            <h4>Touching the Beverage</h4>
-                            <p>We deploy I-MP in a real-world scenario to touch the beverage from a cabinet with stuck objects.</p>
                         </div>
                     </div>
                     <div class="video-item">
@@ -311,7 +279,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 A Reliable Robot Motion Planner. All rights reserved.</p>
+            <p>&copy; 2025 A Tactile-based Interactive Motion Planner for Robots in Cluttered Unknown Environments. All rights reserved.</p>
         </div>
     </footer>
 
